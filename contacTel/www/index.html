@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact'Tel</title>
+    <link rel="stylesheet" href="css/TaskManagement.min.css" />
+    <link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" />
+    <link rel="stylesheet" href="css/index.css"/>
+    <script src="cordova.js"></script>
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+    <div id="contact-list" data-role="page">
+        <div data-role="header">
+            <h1>Contact 'Tel</h1>
+        </div>
+        <div role="main" class="ui-content">
+            <a href="#addContact" data-role="button" data-icon="plus" data-iconpos="right">Ajouter</a>
+            <ul id="contactList" data-role="listview" data-inset="true"></ul>
+        </div>
+    </div>
+
+    <div id="addContact" data-role="page">
+        <div data-role="header">
+            <a data-rel="back" data-icon="back" data-iconpos="notext">Précédent</a>
+            <h1>Contact 'Tel</h1>
+        </div>
+        <div role="main" class="ui-content">
+            <div data-role="header">
+                <h2>Ajouter contact </h2>
+            </div>
+            <ul data-role="listview" data-inset="true"></ul>
+
+            <form id="addContactForm">
+
+                <label for="contactName">Nom du contact:</label>
+                <input type="text" id="contactName" name="contactName">
+
+                <label for="contactPhoneNumber">Téléphone:</label>
+                <input type="tel" id="contactPhoneNumber" name="contactPhoneNumber">
+
+                <label for="contactEmail">e-mail:</label>
+                <input type="email" id="contactEmail" name="contactEmail">
+
+                <label for="contactOrganization">Organisation:</label>
+                <input type="text" id="contactOrganization" name="contactOrganization">
+
+                <input type="submit" value="Ajouter">
+            </form>
+        </div>
+    </div>
+
+    <div id="contact-details" data-role="page">
+        <div data-role="header">
+            <a data-rel="back" data-icon="back" data-iconpos="notext">Précédent</a>
+            <h1>Contact 'Tel</h1>
+        </div>
+        <div role="main" class="ui-content">
+            <div data-role="header">
+                <a href="#editContactPage" data-role="button" data-icon="edit" data-iconpos="notext"
+                class="edit-contact-button" id="editContactButton" data-contact-id="">Modifier</a>
+
+                <h2>Details contact</h2>
+                <a href="#" data-icon="delete" data-iconpos="notext" id="deleteContactButton">Supprimer</a>
+            </div>
+            <ul data-role="listview" data-inset="true" id="contactDetailsList"></ul>
+        </div>
+    </div>
+
+    <div id="editContactPage" data-role="page">
+        <div data-role="header">
+            <a data-rel="back" data-icon="back" data-iconpos="notext">Précédent</a>
+            <h1>Contact 'Tel</h1>
+        </div>
+        <div role="main" class="ui-content">
+            <div data-role="header">
+                <h2>Modifier contact </h2>
+            </div>
+            <ul data-role="listview" data-inset="true"></ul>
+
+            <form id="editContactForm" class="edit-contact-form">
+
+                <label for="editContactName">Nom du contact:</label>
+                <input type="text" id="editContactName" name="editContactName">
+
+                <label for="editContactPhoneNumber">Téléphone:</label>
+                <input type="tel" id="editContactPhoneNumber" name="editContactPhoneNumber">
+
+                <label for="editContactEmail">e-mail:</label>
+                <input type="email" id="editContactEmail" name="editContactEmail">
+
+                <label for="editContactOrganization">Organisation:</label>
+                <input type="text" id="editContactOrganization" name="editContactOrganization">
+
+                <input type="submit" value="Modifier">
+            </form>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h3>ZN&copy; for M2</h3>
+        </div>
+    </div>
+</body>
+</html>

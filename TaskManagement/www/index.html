@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gestion de taches</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/TaskManagement.min.css" />
+        <link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
+        <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" />
+        <link rel="stylesheet" href="css/index.css"/>
+        <script src="lib/js/jquery.min.js"></script>
+        <script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
+        <script src="lib/js/index.js"></script>
+    </head>
+    <body>
+        <div data-role="page">
+            <div data-role="header">
+               <h3>Task manager App</h3>
+            </div>
+            <div role="main" class="ui-content">
+                <form>
+                    <input type="text" class="form-class" placeholder="Veuillez renseigner une tâche" name="tache" id="tache">
+                    <input type="button" value="ajouter" id="ajouter"/>
+                    <input type="button" value="reinitialiser" id="reinitialiser"/>
+                </form>
+                <p></p>
+                <div data-role="header" data-theme="b" class="compartiment">
+                    <h1 id="encours">Encours</h1>
+                </div>
+                <p></p>
+                <ul id="tachesEncours" data-role="listview" data-inset="true">
+                </ul>
+                <p></p>
+                <div data-role="header" data-theme="b" class="compartiment">
+                    <h1 id="terminee">Terminées</h1>
+                </div>
+                <p></p>
+                <ul data-role="listview" id="tachesTerminee" data-inset="true">
+                </ul>
+            </div>
+            <div data-role="footer" data-position="fixed">
+               <h3>ZN&copy; for M2</h3>
+            </div>
+        </div>
+    </body>
+</html>

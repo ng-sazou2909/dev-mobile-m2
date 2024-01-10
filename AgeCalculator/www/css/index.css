@@ -1,0 +1,11 @@
+H3, label, input {
+    text-align: center;
+}
+
+label, input {
+    display: block;
+    width: 90%;
+    margin:auto;
+    margin-button: 10px;
+    height: 30px;
+}
